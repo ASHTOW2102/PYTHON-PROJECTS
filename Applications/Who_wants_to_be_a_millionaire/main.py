@@ -12,23 +12,24 @@ questions = [
     ["What is the smallest country in the world?", "San Marino", "Vatican City", "Monaco", "Liechtenstein", 2]
 ]
 
-prizes = [100000, 320000, 400000, 450000,  500000, 1000000, 2000000, 3000000, 4000000, 5000000, 6000000]
-
-i = 0 
+Prizes = ["1000$","2000$","3000$","4000$","5000$","6000$","7000$","8000$","9000$","10000$","11000$"]
+i=0
 for question in questions:
     print(question[0])
-    print(f"a. {question[1]}")
-    print(f"b. {question[2]}")
-    print(f"c. {question[3]}")
-    print(f"d. {question[4]}")
+    print(question[1])
+    print(question[2])
+    print(question[3])
+    print(question[4])
 
-    # Check whether the answer is correct or not
-    a = int(input("Enter your answer. 1 for a, 2 for b, 3 for c, 4 for d\n"))
-    if(question[5] == a):
-        print("Correct Answer")
+    Answer = int(input("Enter the correct answer: "))
+
+    if(question[5]==Answer):
+        length=len(questions)
+        print(f"Congrats!! you won {Prizes[i]}")
+        i=i+1
+        print("\n**************************************\n")
+
     else:
         print(f"Incorrect, the correct answer was {question[5]}")
-        print("Better luck next time!")
-        break 
-    print(f"You won {prizes[i]}")
-    i +=1    
+        print("Better luck next time")
+        break    
